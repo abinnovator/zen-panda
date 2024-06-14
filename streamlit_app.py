@@ -13,7 +13,7 @@ if "messages" not in st.session_state:
 
 genai.configure(api_key=st.secrets["API_KEY"])
 model = genai.GenerativeModel('gemini-1.5-flash', system_instruction="Give responses like you are a therapist, give the answer in less than 45 words, demonstrate curiosity and show support being non judgemental",)
-chat = model.start_chat(history=st.session_state.messages)
+chat = model.start_chat(history=[])
 
 
 # Display chat messages from history on app rerun
