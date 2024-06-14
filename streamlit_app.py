@@ -23,7 +23,7 @@ for message in st.session_state.messages:
 
 def get_response(user):
     response = chat.send_message(user)
-    return response
+    return response.text
 
 
 # React to user input
